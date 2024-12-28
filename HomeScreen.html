@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Screen</title>
+  <link rel="stylesheet" href="HomeScreen.css">
+</head>
+<body>
+  <canvas></canvas>
+  <button class="button rules-button" onclick="openRules()">Rules</button>
+  <button class="button play-button" onclick="window.location.href='GameScreen.html'">Play</button>
+  <button class="button score-button" onclick="openScore()">Score</button>
+
+  <div class="transbox" id="rules-box">
+    <button class="close-button" onclick="closeRules()">X</button>
+    <h2>Rules</h2>
+    <div class="key-box">Player 1 Movements: <span>A and D</span></div>
+    <div class="key-box">Player 1 Jump: <span>W</span></div>
+    <div class="key-box">Player 1 Attack: <span>Q and E</span></div>
+    <div class="key-box">Player 2 Movements: <span>J and L</span></div>
+    <div class="key-box">Player 2 Jump: <span>I</span></div>
+    <div class="key-box">Player 2 Attack: <span>U and O</span></div>
+    <div class="key-box">Music: <span>M</span></div>
+    <div class="key-box">Return to Home Page: <span>Esc</span></div>
+  </div>
+  
+  <div id="scorebox" class="scorebox">
+    <button class="close-button" onclick="closeScore()">X</button>
+    <h2>Score</h2>
+    <div class="key-box">Player 1 Wins: <span id="player-wins">0</span></div>
+    <div class="key-box">Player 2 Wins: <span id="enemy-wins">0</span></div>
+    <div class="key-box">Ties: <span id="ties">0</span></div>
+  </div>
+
+  <script src="HomeScreen.js"></script>
+</body>
+</html>
